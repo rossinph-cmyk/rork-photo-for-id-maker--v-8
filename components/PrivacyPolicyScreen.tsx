@@ -181,7 +181,7 @@ export default function PrivacyPolicyScreen({ onAccept }: PrivacyPolicyScreenPro
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#F5F1E8',
   },
   header: {
     backgroundColor: 'white',
