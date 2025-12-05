@@ -1,7 +1,7 @@
 {
    "expo": {
-    "name": "EZ.passport.ID photos",
-    "slug": "EZ.passport.ID photos",
+    "name": "EZ.passport.ID.photos",
+    "slug": "EZ.passport.ID.photos",
     "version": "1.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
