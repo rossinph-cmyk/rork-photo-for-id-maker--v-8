@@ -302,7 +302,7 @@ export default function HomeScreen() {
               contentFit="contain"
             />
             <View style={styles.titleContainer}>
-              <Text style={styles.title}>Photo For ID Maker</Text>
+              <Text style={styles.title}>EZ.passport.ID.photos</Text>
               <Text style={styles.subtitle}>Simple ID Photos</Text>
             </View>
           </View>
