@@ -1,7 +1,7 @@
 {
    "expo": {
-    "name": "EZ passport.&.ID photos",
-    "slug": "EZ passport.&.ID photos",
+    "name": "EZ.passport.&.ID photos",
+    "slug": "EZ.passport.&.ID photos",
     "version": "1.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -15,7 +15,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "app.rork EZ passport.ID photos",
+      "bundleIdentifier": "app.rork.EZ.passport.&.ID.photos",
       "infoPlist": {
         "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos",
         "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access your camera",
@@ -27,7 +27,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.rossinph.EZ passport.ID photos",
+      "package": "com.rossinph.EZ.passport.&.ID.photos",
       "versionCode": 8,
       "permissions": [
         "CAMERA",
@@ -49,21 +49,21 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "Allow (EZ passport & ID photos) to access your photos"
+          "photosPermission": "Allow (EZ.passport.&.ID.photos) to access your photos"
         }
       ],
       [
         "expo-camera",
         {
-          "cameraPermission": "Allow (EZ passport & ID photos) to access your camera",
+          "cameraPermission": "Allow (EZ.passport.&.ID.photos) to access your camera",
           "recordAudioAndroid": false
         }
       ],
       [
         "expo-media-library",
         {
-          "photosPermission": "Allow (EZ passport & ID photos) to access your photos.",
-          "savePhotosPermission": "Allow (EZ passport & ID photos) to save photos.",
+          "photosPermission": "Allow (EZ.passport.&.ID.photos) to access your photos.",
+          "savePhotosPermission": "Allow (EZ.passport.&.ID.photos) to save photos.",
           "isAccessMediaLocationEnabled": false,
           "androidPermissions": [
             "READ_MEDIA_IMAGES",
