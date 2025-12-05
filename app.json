@@ -1,9 +1,7 @@
 {
-  // Your other JSON keys...
+  Your other JSON keys...
 
   "notes": "Important notice: Double-check all permissions and be sure everything is 100% compliant for Google Play before submission."
-  
-  // Rest of your JSON...
 }
 {
   "expo": {
