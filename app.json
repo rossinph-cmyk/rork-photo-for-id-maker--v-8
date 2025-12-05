@@ -15,7 +15,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "app.rork.EZ.passport.ID.photos",
+      "bundleIdentifier": "app.rork.ezpassportidphotos",
       "infoPlist": {
         "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos",
         "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access your camera",
@@ -27,7 +27,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.rossinph.EZ.passport.ID.photos",
+      "package": "com.rossinphezpassportidphotos",
       "versionCode": 8,
       "permissions": [
         "CAMERA",
