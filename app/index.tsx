@@ -635,7 +635,7 @@ const styles = StyleSheet.create({
   headerContent: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center' },
   logoIcon: { position: 'absolute', left: 0, width: 50, height: 50 },
   titleContainer: { alignItems: 'center' },
-  title: { fontSize: 26, fontWeight: 'bold', color: '#5A7C8E', marginBottom: 4 },
+  title: { fontSize: 18, fontWeight: 'bold', color: '#5A7C8E', marginBottom: 4 },
   subtitle: { fontSize: 16, color: '#8A9BA8' },
   featuresButton: { margin: 20, borderRadius: 16, overflow: 'hidden' },
   featuresGradient: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingVertical: 18, paddingHorizontal: 24 },
