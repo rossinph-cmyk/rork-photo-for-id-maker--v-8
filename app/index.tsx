@@ -14,7 +14,7 @@ import {
   PanResponderGestureState,
 } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
-import { Camera, Image as ImageIcon, ChevronDown, Info, Eye, Heart } from 'lucide-react-native';
+import { Camera, Image as ImageIcon, ChevronDown, Info, Eye } from 'lucide-react-native';
 import * as ImagePicker from 'expo-image-picker';
 
 import { LinearGradient } from 'expo-linear-gradient';
@@ -296,22 +296,16 @@ export default function HomeScreen() {
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false} scrollEnabled={!isPanningImage}>
         <View style={styles.header}>
           <View style={styles.headerContent}>
-            <View style={styles.flagContainer}>
-              <View style={styles.flag}><View style={styles.flagBlue} /><View style={styles.flagRed} /></View>
-            </View>
             <View style={styles.titleContainer}>
               <Text style={styles.title}>Photo For ID Maker</Text>
-              <Text style={styles.subtitle}>Professional Filipino ID Photos</Text>
+              <Text style={styles.subtitle}>Simple ID Photos</Text>
             </View>
           </View>
-          <TouchableOpacity style={styles.heartButton}>
-            <Heart color="#CE1126" size={24} fill="#CE1126" />
-          </TouchableOpacity>
         </View>
 
         <TouchableOpacity style={styles.featuresButton} onPress={() => setShowFeaturesModal(true)}>
-          <LinearGradient colors={['#0038A8', '#CE1126']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={styles.featuresGradient}>
-            <Info color="white" size={20} />
+          <LinearGradient colors={['#6BB6E0', '#7EC990']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={styles.featuresGradient}>
+            <Info color="white" size={22} />
             <Text style={styles.featuresButtonText}>Features</Text>
           </LinearGradient>
         </TouchableOpacity>
@@ -375,7 +369,7 @@ export default function HomeScreen() {
                 <Text style={styles.actionButtonText}>Take Picture</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.actionButtonSecondary} onPress={handleSelectFromGallery}>
-                <ImageIcon color="#0038A8" size={24} />
+                <ImageIcon color="#6BB6E0" size={24} />
                 <Text style={styles.actionButtonSecondaryText}>Gallery</Text>
               </TouchableOpacity>
             </>
@@ -390,7 +384,7 @@ export default function HomeScreen() {
                 <Text style={styles.actionButtonText}>Preview 3 Photos</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.actionButtonSecondary} onPress={handleClearImage}>
-                <ImageIcon color="#0038A8" size={24} />
+                <ImageIcon color="#6BB6E0" size={24} />
                 <Text style={styles.actionButtonSecondaryText}>Select New Photo</Text>
               </TouchableOpacity>
             </>
@@ -616,68 +610,63 @@ const croppingStyles = StyleSheet.create({
   overlayPart: { backgroundColor: 'rgba(0, 0, 0, 0.5)' },
   overlayRow: { flexDirection: 'row' },
   cropTransparent: { backgroundColor: 'transparent' },
-  cropArea: { position: 'absolute', borderWidth: 2, borderColor: '#0038A8', borderStyle: 'solid' },
+  cropArea: { position: 'absolute', borderWidth: 2, borderColor: '#6BB6E0', borderStyle: 'solid' },
   gridContainer: { flex: 1, position: 'relative' },
   gridLine: { position: 'absolute', backgroundColor: 'rgba(255, 255, 255, 0.8)', width: 1, height: '100%' },
   gridLineHorizontal: { width: '100%', height: 1 },
   sliderContainer: { position: 'absolute', left: 6, width: 48, zIndex: 20, justifyContent: 'center', alignItems: 'center' },
   sliderBody: { position: 'absolute', top: 10, bottom: 10, width: 40, alignItems: 'center', justifyContent: 'flex-end' },
   sliderTrack: { position: 'absolute', left: 16, right: 16, top: 0, bottom: 0, borderRadius: 8, backgroundColor: 'rgba(0,0,0,0.2)' },
-  sliderFill: { position: 'absolute', left: 16, right: 16, bottom: 0, borderBottomLeftRadius: 8, borderBottomRightRadius: 8, backgroundColor: '#0038A8' },
-  sliderThumb: { position: 'absolute', left: 6, right: 6, height: 20, borderRadius: 10, backgroundColor: '#CE1126', borderWidth: 2, borderColor: '#fff', transform: [{ translateY: 10 }] },
+  sliderFill: { position: 'absolute', left: 16, right: 16, bottom: 0, borderBottomLeftRadius: 8, borderBottomRightRadius: 8, backgroundColor: '#6BB6E0' },
+  sliderThumb: { position: 'absolute', left: 6, right: 6, height: 20, borderRadius: 10, backgroundColor: '#7EC990', borderWidth: 2, borderColor: '#fff', transform: [{ translateY: 10 }] },
   sliderLabels: { position: 'absolute', top: -18, left: 0, right: 0, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 6 },
-  sliderLabelText: { color: '#0038A8', fontSize: 10, fontWeight: '700' },
+  sliderLabelText: { color: '#6BB6E0', fontSize: 10, fontWeight: '700' },
 });
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#f8f9fa' },
+  container: { flex: 1, backgroundColor: '#F5F1E8' },
   scrollView: { flex: 1 },
-  header: { backgroundColor: 'white', paddingVertical: 20, paddingHorizontal: 20, borderBottomWidth: 1, borderBottomColor: '#e9ecef', position: 'relative' },
-  headerContent: { flexDirection: 'row', alignItems: 'center' },
-  flagContainer: { marginRight: 15 },
-  flag: { width: 40, height: 24, borderRadius: 4, overflow: 'hidden', borderWidth: 1, borderColor: '#ddd' },
-  flagBlue: { flex: 1, backgroundColor: '#0038A8' },
-  flagRed: { flex: 1, backgroundColor: '#CE1126' },
-  titleContainer: { flex: 1 },
-  title: { fontSize: 24, fontWeight: 'bold', color: '#0038A8', marginBottom: 2 },
-  subtitle: { fontSize: 14, color: '#666' },
-  heartButton: { position: 'absolute', top: 20, right: 20, padding: 5 },
-  featuresButton: { margin: 20, borderRadius: 12, overflow: 'hidden' },
-  featuresGradient: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingVertical: 15, paddingHorizontal: 20 },
-  featuresButtonText: { color: 'white', fontSize: 16, fontWeight: '600', marginLeft: 8 },
-  sizeSection: { backgroundColor: 'white', marginHorizontal: 20, marginBottom: 20, borderRadius: 12, padding: 20 },
+  header: { backgroundColor: 'white', paddingVertical: 24, paddingHorizontal: 20, borderBottomWidth: 1, borderBottomColor: '#E8DEC9', position: 'relative' },
+  headerContent: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center' },
+  titleContainer: { alignItems: 'center' },
+  title: { fontSize: 26, fontWeight: 'bold', color: '#5A7C8E', marginBottom: 4 },
+  subtitle: { fontSize: 16, color: '#8A9BA8' },
+  featuresButton: { margin: 20, borderRadius: 16, overflow: 'hidden' },
+  featuresGradient: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingVertical: 18, paddingHorizontal: 24 },
+  featuresButtonText: { color: 'white', fontSize: 18, fontWeight: '600', marginLeft: 10 },
+  sizeSection: { backgroundColor: 'white', marginHorizontal: 20, marginBottom: 20, borderRadius: 16, padding: 24 },
   sizeRow: { flexDirection: 'row', gap: 15 },
   sizeColumn: { flex: 1 },
-  sizeLabel: { fontSize: 16, fontWeight: '600', color: '#333', marginBottom: 8 },
-  dropdown: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#f8f9fa', borderWidth: 1, borderColor: '#dee2e6', borderRadius: 8, paddingHorizontal: 12, paddingVertical: 12 },
-  dropdownText: { fontSize: 14, color: '#333', flex: 1 },
-  previewSection: { backgroundColor: 'white', marginHorizontal: 20, marginBottom: 20, borderRadius: 12, padding: 20 },
-  previewTitle: { fontSize: 16, fontWeight: '600', color: '#333', marginBottom: 15 },
+  sizeLabel: { fontSize: 17, fontWeight: '600', color: '#5A7C8E', marginBottom: 10 },
+  dropdown: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#F5F1E8', borderWidth: 2, borderColor: '#E8DEC9', borderRadius: 10, paddingHorizontal: 14, paddingVertical: 14 },
+  dropdownText: { fontSize: 15, color: '#5A7C8E', flex: 1 },
+  previewSection: { backgroundColor: 'white', marginHorizontal: 20, marginBottom: 20, borderRadius: 16, padding: 24 },
+  previewTitle: { fontSize: 18, fontWeight: '600', color: '#5A7C8E', marginBottom: 15 },
   previewContainer: { alignItems: 'center' },
-  previewBox: { width: '100%', height: 300, backgroundColor: '#f8f9fa', borderWidth: 2, borderColor: '#dee2e6', borderStyle: 'dashed', borderRadius: 8, position: 'relative', overflow: 'hidden' },
+  previewBox: { width: '100%', height: 300, backgroundColor: '#F5F1E8', borderWidth: 2, borderColor: '#E8DEC9', borderStyle: 'dashed', borderRadius: 12, position: 'relative', overflow: 'hidden' },
   placeholderContainer: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   gridOverlay: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 },
-  gridLine: { position: 'absolute', backgroundColor: '#0038A8', opacity: 0.3, width: 1, height: '100%', left: '50%', marginLeft: -0.5 },
+  gridLine: { position: 'absolute', backgroundColor: '#6BB6E0', opacity: 0.3, width: 1, height: '100%', left: '50%', marginLeft: -0.5 },
   gridLineHorizontal: { width: '100%', height: 1, top: '50%', left: 0, marginTop: -0.5 },
   watermark: { position: 'absolute', top: 10, right: 10, opacity: 0.3 },
-  watermarkText: { fontSize: 8, fontWeight: 'bold', color: '#0038A8', textAlign: 'center' },
-  previewPlaceholder: { fontSize: 14, color: '#666', textAlign: 'center' },
-  cropInstructions: { marginTop: 10, paddingHorizontal: 10 },
-  instructionText: { fontSize: 12, color: '#666', textAlign: 'center', lineHeight: 16 },
+  watermarkText: { fontSize: 8, fontWeight: 'bold', color: '#5A7C8E', textAlign: 'center' },
+  previewPlaceholder: { fontSize: 16, color: '#8A9BA8', textAlign: 'center' },
+  cropInstructions: { marginTop: 12, paddingHorizontal: 10 },
+  instructionText: { fontSize: 14, color: '#8A9BA8', textAlign: 'center', lineHeight: 20 },
   actionSection: { paddingHorizontal: 20, paddingBottom: 30, gap: 15 },
-  actionButton: { backgroundColor: '#0038A8', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingVertical: 16, borderRadius: 12, gap: 10 },
-  actionButtonText: { color: 'white', fontSize: 16, fontWeight: '600' },
-  actionButtonSecondary: { backgroundColor: 'white', borderWidth: 2, borderColor: '#0038A8', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingVertical: 16, borderRadius: 12, gap: 10 },
-  actionButtonSecondaryText: { color: '#0038A8', fontSize: 16, fontWeight: '600' },
+  actionButton: { backgroundColor: '#6BB6E0', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingVertical: 18, borderRadius: 14, gap: 10 },
+  actionButtonText: { color: 'white', fontSize: 18, fontWeight: '600' },
+  actionButtonSecondary: { backgroundColor: 'white', borderWidth: 2, borderColor: '#6BB6E0', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingVertical: 18, borderRadius: 14, gap: 10 },
+  actionButtonSecondaryText: { color: '#6BB6E0', fontSize: 18, fontWeight: '600' },
   modalOverlay: { flex: 1, backgroundColor: 'rgba(0, 0, 0, 0.5)', justifyContent: 'center', alignItems: 'center' },
-  modalContent: { backgroundColor: 'white', borderRadius: 16, padding: 24, margin: 20, maxHeight: '80%', minWidth: 300, gap: 12 },
-  modalTitle: { fontSize: 20, fontWeight: 'bold', color: '#333', marginBottom: 20, textAlign: 'center' },
-  modalOption: { paddingVertical: 15, paddingHorizontal: 16, borderRadius: 8, marginBottom: 8 },
-  modalOptionSelected: { backgroundColor: '#0038A8' },
-  modalOptionText: { fontSize: 16, color: '#333' },
+  modalContent: { backgroundColor: 'white', borderRadius: 20, padding: 28, margin: 20, maxHeight: '80%', minWidth: 300, gap: 12 },
+  modalTitle: { fontSize: 22, fontWeight: 'bold', color: '#5A7C8E', marginBottom: 20, textAlign: 'center' },
+  modalOption: { paddingVertical: 16, paddingHorizontal: 18, borderRadius: 10, marginBottom: 8 },
+  modalOptionSelected: { backgroundColor: '#6BB6E0' },
+  modalOptionText: { fontSize: 17, color: '#5A7C8E' },
   modalOptionTextSelected: { color: 'white', fontWeight: '600' },
-  modalCloseButton: { marginTop: 20, paddingVertical: 12, alignItems: 'center' },
-  modalCloseText: { fontSize: 16, color: '#666', fontWeight: '600' },
-  featuresList: { gap: 12 },
-  featureItem: { fontSize: 16, color: '#333', lineHeight: 24 },
+  modalCloseButton: { marginTop: 20, paddingVertical: 14, alignItems: 'center' },
+  modalCloseText: { fontSize: 17, color: '#8A9BA8', fontWeight: '600' },
+  featuresList: { gap: 14 },
+  featureItem: { fontSize: 17, color: '#5A7C8E', lineHeight: 26 },
 });
