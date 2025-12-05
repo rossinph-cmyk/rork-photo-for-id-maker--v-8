@@ -296,6 +296,11 @@ export default function HomeScreen() {
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false} scrollEnabled={!isPanningImage}>
         <View style={styles.header}>
           <View style={styles.headerContent}>
+            <Image
+              source={{ uri: 'https://pub-e001eb4506b145aa938b5d3badbff6a5.r2.dev/attachments/0m3bfk799ohiqlgtn9gh1' }}
+              style={styles.logoIcon}
+              contentFit="contain"
+            />
             <View style={styles.titleContainer}>
               <Text style={styles.title}>Photo For ID Maker</Text>
               <Text style={styles.subtitle}>Simple ID Photos</Text>
@@ -628,6 +633,7 @@ const styles = StyleSheet.create({
   scrollView: { flex: 1 },
   header: { backgroundColor: 'white', paddingVertical: 24, paddingHorizontal: 20, borderBottomWidth: 1, borderBottomColor: '#E8DEC9', position: 'relative' },
   headerContent: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center' },
+  logoIcon: { position: 'absolute', left: 0, width: 50, height: 50 },
   titleContainer: { alignItems: 'center' },
   title: { fontSize: 26, fontWeight: 'bold', color: '#5A7C8E', marginBottom: 4 },
   subtitle: { fontSize: 16, color: '#8A9BA8' },
