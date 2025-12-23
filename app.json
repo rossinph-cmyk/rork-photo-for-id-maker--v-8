@@ -15,7 +15,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "app.rork.ezpassportidphotos",
+      "bundleIdentifier": "app.rork.photoforids",
       "infoPlist": {
         "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos",
         "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access your camera",
@@ -28,8 +28,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.rossinphezpassportidphotos",
-      "versionCode": 8,
+      "package": "com.rossinphphotoforids",
+      "versionCode": 9,
       "permissions": [
         "CAMERA",
         "READ_MEDIA_IMAGES",
@@ -50,13 +50,13 @@
       [
         "expo-image-picker",
         {
-          "photosPermission": "Allow (EZ.passport.ID.photos) to access your photos"
+          "photosPermission": "Allow (photoforids) to access your photos"
         }
       ],
       [
         "expo-camera",
         {
-          "cameraPermission": "Allow (EZ.passport.ID.photos) to access your camera",
+          "cameraPermission": "Allow (photoforids) to access your camera",
           "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
           "recordAudioAndroid": false
         }
@@ -64,8 +64,8 @@
       [
         "expo-media-library",
         {
-          "photosPermission": "Allow (EZ.passport.ID.photos) to access your photos.",
-          "savePhotosPermission": "Allow (EZ.passport.ID.photos) to save photos.",
+          "photosPermission": "Allow (photoforids) to access your photos.",
+          "savePhotosPermission": "Allow (photoforids) to save photos.",
           "isAccessMediaLocationEnabled": false,
           "androidPermissions": [
             "READ_MEDIA_IMAGES",
